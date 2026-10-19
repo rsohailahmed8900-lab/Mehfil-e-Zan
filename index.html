@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehfil-e-Zan | Gather. Grow. Glow. | Women-Only Cafe & Community Space in Karachi</title>
+    <meta name="description" content="Mehfil-e-Zan is Karachi's premier women-only cafe and community space in Gulshan-e-Iqbal. A safe, warm space for tea, remote work, workshops, and sisterhood.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Styling -->
+    <style>
+        :root {
+            --sage-green: #9CAF88;
+            --sage-dark: #7A8D67;
+            --sage-light: #E8EDE4;
+            --terracotta: #C66B4E;
+            --terracotta-hover: #A85338;
+            --cream: #F7F0E3;
+            --cream-card: #FAF6EE;
+            --dark-brown: #3E2C23;
+            --brown-muted: #624B3E;
+            --border-color: rgba(62, 44, 35, 0.12);
+            --shadow-sm: 0 4px 12px rgba(62, 44, 35, 0.05);
+            --shadow-md: 0 8px 24px rgba(62, 44, 35, 0.08);
+            --shadow-lg: 0 16px 36px rgba(62, 44, 35, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-brown);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--dark-brown);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            direction: rtl;
+            display: inline-block;
+            line-height: 1.8;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--brown-muted);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Focus outline for accessibility */
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+            outline: 3px solid var(--terracotta);
+            outline-offset: 3px;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--terracotta);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--sage-green);
+            margin: 1rem auto 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--sage-light);
+            color: var(--dark-brown);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary {
+            background-color: var(--terracotta);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--terracotta-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border-color: var(--sage-green);
+            color: var(--dark-brown);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--sage-green);
+            color: #FFFFFF;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-white {
+            background-color: transparent;
+            border-color: #FFFFFF;
+            color: #FFFFFF;
+        }
+
+        .btn-outline-white:hover {
+            background-color: #FFFFFF;
+            color: var(--dark-brown);
+            transform: translateY(-2px);
+        }
+
+        /* Floral Pattern Background Overlay */
+        .pattern-bg {
+            background-image: radial-gradient(var(--sage-green) 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+            opacity: 0.85;
+        }
+
+        /* ==========================================
+           HEADER / NAVBAR
+        ========================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(247, 240, 227, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow-md);
+            padding: 0.2rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: var(--sage-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cream);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-brown);
+            line-height: 1;
+        }
+
+        .brand-tagline {
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            color: var(--terracotta);
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--dark-brown);
+            position: relative;
+            padding: 0.25rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--terracotta);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+        }
+
+        /* ==========================================
+           HERO SECTION
+        ========================================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            background: linear-gradient(rgba(62, 44, 35, 0.55), rgba(62, 44, 35, 0.65)), 
+                        url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+            color: #FFFFFF;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-urdu {
+            font-size: 3.5rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .hero-tagline-badge {
+            display: inline-block;
+            background-color: rgba(156, 175, 136, 0.9);
+            color: #FFFFFF;
+            padding: 0.4rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--cream);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-quick-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.95rem;
+        }
+
+        .quick-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Divider Floral SVG */
+        .divider-svg {
+            display: block;
+            margin: 2rem auto;
+            width: 120px;
+            height: auto;
+            fill: var(--terracotta);
+        }
+
+        /* ==========================================
+           ABOUT SECTION
+        ========================================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            background-color: var(--sage-light);
+        }
+
+        .about-badge-card {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FFFFFF;
+            padding: 1.25rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            max-width: 220px;
+            border-left: 4px solid var(--terracotta);
+        }
+
+        .about-badge-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--dark-brown);
+        }
+
+        .vision-mission-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .vm-card {
+            background-color: var(--cream-card);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .vm-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--terracotta);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .usp-banner {
+            background-color: var(--sage-light);
+            border-left: 5px solid var(--sage-green);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin-top: 2.5rem;
+        }
+
+        .usp-banner h4 {
+            font-size: 1.2rem;
+            color: var(--dark-brown);
+            margin-bottom: 0.25rem;
+        }
+
+        /* ==========================================
+           SERVICES SECTION
+        ========================================== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--cream-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-img-container {
+            height: 220px;
+            width: 100%;
+            position: relative;
+            background-color: var(--sage-light);
+            overflow: hidden;
+        }
+
+        .service-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img-container img {
+            transform: scale(1.05);
+        }
+
+        .service-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: rgba(247, 240, 227, 0.9);
+            color: var(--dark-brown);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .service-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-list {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .service-list li {
+            font-size: 0.9rem;
+            color: var(--brown-muted);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-list li i {
+            color: var(--terracotta);
+            font-size: 0.8rem;
+        }
+
+        /* ==========================================
+           WHY CHOOSE MEHFIL
+        ========================================== */
+        .why-section {
+            background-color: var(--sage-light);
+            position: relative;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            background: #FFFFFF;
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(156, 175, 136, 0.3);
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--terracotta);
+        }
+
+        .why-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: var(--cream);
+            color: var(--terracotta);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin: 0 auto 1.25rem;
+            transition: var(--transition);
+        }
+
+        .why-card:hover .why-icon {
+            background-color: var(--terracotta);
+            color: #FFFFFF;
+        }
+
+        .why-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .why-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================
+           MEMBERSHIP SECTION
+        ========================================== */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--cream-card);
+            border-radius: var(--radius-md);
+            padding: 2.5rem 2rem;
+            border: 1px solid var(--border-color);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .pricing-card.featured {
+            background: #FFFFFF;
+            border: 2px solid var(--terracotta);
+            box-shadow: var(--shadow-md);
+            transform: scale(1.03);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--terracotta);
+            color: #FFFFFF;
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .pricing-title {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 2.25rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: var(--terracotta);
+        }
+
+        .pricing-price span {
+            font-size: 0.9rem;
+            font-family: 'Lato', sans-serif;
+            color: var(--brown-muted);
+            font-weight: 400;
+        }
+
+        .pricing-features {
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .pricing-features li i {
+            color: var(--sage-dark);
+        }
+
+        /* ==========================================
+           BOOK A VISIT / CONTACT SECTION
+        ========================================== */
+        .contact-section {
+            background-color: var(--sage-light);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background-color: #FFFFFF;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-info {
+            padding: 3rem;
+            background-color: var(--dark-brown);
+            color: var(--cream);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .contact-info h3 {
+            color: var(--cream);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .info-item i {
+            font-size: 1.25rem;
+            color: var(--sage-green);
+            margin-top: 0.2rem;
+        }
+
+        .info-item h5 {
+            color: var(--cream);
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .info-item p {
+            color: rgba(247, 240, 227, 0.8);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-form-container {
+            padding: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.875rem;
+            margin-bottom: 0.4rem;
+            color: var(--dark-brown);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            background-color: var(--cream);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            color: var(--dark-brown);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--terracotta);
+            background-color: #FFFFFF;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* Success Message Alert */
+        .form-alert {
+            display: none;
+            padding: 1rem;
+            background-color: var(--sage-light);
+            border: 1px solid var(--sage-green);
+            color: var(--dark-brown);
+            border-radius: var(--radius-sm);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* ==========================================
+           FOOTER
+        ========================================== */
+        footer {
+            background-color: var(--dark-brown);
+            color: var(--cream);
+            padding: 4rem 0 2rem;
+            border-top: 3px solid var(--terracotta);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .brand-name {
+            color: var(--cream);
+        }
+
+        .footer-brand p {
+            color: rgba(247, 240, 227, 0.7);
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-title {
+            color: var(--cream);
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-links a {
+            color: rgba(247, 240, 227, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--sage-green);
+            padding-left: 4px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cream);
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            background-color: var(--terracotta);
+            color: #FFFFFF;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(247, 240, 227, 0.5);
+        }
+
+        /* ==========================================
+           RESPONSIVE MEDIA QUERIES
+        ========================================== */
+        @media (max-width: 992px) {
+            .hero-title { font-size: 3rem; }
+            .hero-urdu { font-size: 2.75rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .pricing-card.featured { transform: none; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--cream);
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.5rem;
+                transition: var(--transition);
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero-quick-info {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-mission-box {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         HEADER / NAVBAR
+    ========================================== -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#hero" class="brand-logo" aria-label="Mehfil-e-Zan Home">
+                <div class="logo-icon">
+                    <!-- Teacup SVG with petal steam -->
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
+                        <!-- Petal / Flower Steam -->
+                        <path d="M6 2c.5 1 1.5 2 2 3c-.5 1-1.5 1-2 0c-.5 1-1.5 1-2 0c.5-1 1.5-2 2-3z" fill="currentColor" stroke="none"/>
+                        <path d="M12 2c.5 1 1.5 2 2 3c-.5 1-1.5 1-2 0c-.5 1-1.5 1-2 0c.5-1 1.5-2 2-3z" fill="currentColor" stroke="none"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Mehfil-e-Zan</span>
+                    <span class="brand-tagline">Gather • Grow • Glow</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#why-choose" class="nav-link">Why Mehfil</a></li>
+                    <li><a href="#membership" class="nav-link">Membership</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.875rem;">Book a Visit</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================
+             HERO SECTION
+        ========================================== -->
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+                <div class="hero-urdu urdu-text">محفلِ زن</div>
+                <h1 class="hero-title">Mehfil-e-Zan</h1>
+                <div class="hero-tagline-badge">Gather • Grow • Glow</div>
+                <p class="hero-description">
+                    Karachi’s dedicated women-only sanctuary in Gulshan-e-Iqbal. A cozy chai cafe, inspiring community workspace, and vibrant space for workshops & connection.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#membership" class="btn btn-primary">
+                        <i class="fa-solid fa-heart"></i> Join Mehfil
+                    </a>
+                    <a href="#services" class="btn btn-outline-white">
+                        <i class="fa-solid fa-calendar-days"></i> See What's On
+                    </a>
+                </div>
+
+                <div class="hero-quick-info">
+                    <div class="quick-info-item">
+                        <i class="fa-solid fa-location-dot" style="color: var(--sage-green);"></i>
+                        <span>Gulshan-e-Iqbal, Karachi</span>
+                    </div>
+                    <div class="quick-info-item">
+                        <i class="fa-solid fa-clock" style="color: var(--sage-green);"></i>
+                        <span>Daily: 10:00 AM – 10:00 PM</span>
+                    </div>
+                    <div class="quick-info-item">
+                        <i class="fa-solid fa-users" style="color: var(--sage-green);"></i>
+                        <span>Cozy 40-Guest Capacity</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floral Divider SVG -->
+        <svg class="divider-svg" viewBox="0 0 100 20" aria-hidden="true">
+            <path d="M0,10 Q25,0 50,10 T100,10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="50" cy="10" r="4" fill="currentColor"/>
+        </svg>
+
+        <!-- ==========================================
+             ABOUT SECTION
+        ========================================== -->
+        <section id="about" class="section-padding pattern-bg">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Women conversing cheerfully in a cozy cafe setting" 
+                             onerror="this.src='https://placehold.co/600x500/9CAF88/3E2C23?text=Mehfil-e-Zan+Courtyard'">
+                        <div class="about-badge-card">
+                            <p><i class="fa-solid fa-shield-halved" style="color: var(--terracotta);"></i> 100% Women Staffed & Operated</p>
+                        </div>
+                    </div>
+
+                    <div class="about-content">
+                        <span class="section-subtitle">Our Story</span>
+                        <h2 class="section-title" style="text-align: left;">A Sanctuary Created by Women, for Women</h2>
+                        <p style="margin-top: 1rem;">
+                            In the heart of bustling Karachi, <strong>Mehfil-e-Zan</strong> (<em>"A Gathering of Women"</em>) was born out of a simple need: a safe, elegant, and peaceful space where women can sit comfortably, share chai, work without intrusion, and foster meaningful sisterhood.
+                        </p>
+                        <p>
+                            We are more than just a cafe. We are a sanctuary for students studying for exams, freelancers building careers, mothers looking for a brief respite, and creative souls eager to learn new skills.
+                        </p>
+
+                        <div class="vision-mission-box">
+                            <div class="vm-card">
+                                <h4><i class="fa-solid fa-eye"></i> Our Vision</h4>
+                                <p style="font-size: 0.875rem; margin-bottom:0;">To be Karachi’s most trusted and beloved sanctuary where women gather, grow, and glow together.</p>
+                            </div>
+                            <div class="vm-card">
+                                <h4><i class="fa-solid fa-bullseye"></i> Our Mission</h4>
+                                <p style="font-size: 0.875rem; margin-bottom:0;">To serve comforting food and offer safe, accessible spaces and programs that empower women to learn, earn, and connect.</p>
+                            </div>
+                        </div>
+
+                        <div class="usp-banner">
+                            <h4><i class="fa-solid fa-star" style="color: var(--terracotta);"></i> The Mehfil Difference</h4>
+                            <p style="font-size: 0.9rem; margin:0;">
+                                A unique blend of artisanal tea lounge, quiet work library, skill-building workshop studio, and women's membership network under one roof.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SERVICES SECTION
+        ========================================== -->
+        <section id="services" class="section-padding" style="background-color: #FFFFFF;">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-subtitle">What We Offer</span>
+                    <h2 class="section-title">Designed for Every Phase of Your Day</h2>
+                    <p style="max-width: 600px; margin: 0 auto;">Whether you are seeking a quiet desk, a hot cup of Karak Chai, or an uplifting weekend workshop, Mehfil-e-Zan has a place reserved for you.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1: The Cafe -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <span class="service-badge">Culinary Delight</span>
+                            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Hot cup of Karak Chai with traditional snacks"
+                                 onerror="this.src='https://placehold.co/400x300/C66B4E/FAF6EE?text=Chai+%26+Eats'">
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">The Cafe</h3>
+                            <p style="font-size: 0.9rem;">Savor authentic, comforting flavors prepared with love and high hygiene standards by our all-women kitchen team.</p>
+                            <ul class="service-list">
+                                <li><i class="fa-solid fa-mug-hot"></i> Signature Karak & Kashmiri Pink Chai</li>
+                                <li><i class="fa-solid fa-cookie-bite"></i> Fresh Stuffed Parathas & Gourmet Sandwiches</li>
+                                <li><i class="fa-solid fa-cake-candles"></i> Artisanal Coffee, Mocktails & Desserts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Work & Reading Corner -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <span class="service-badge">Productivity</span>
+                            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Quiet reading and study corner with books"
+                                 onerror="this.src='https://placehold.co/400x300/9CAF88/3E2C23?text=Reading+Corner'">
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">Reading & Work Corner</h3>
+                            <p style="font-size: 0.9rem;">A peaceful environment tailored for freelancers, remote workers, students, and avid book lovers.</p>
+                            <ul class="service-list">
+                                <li><i class="fa-solid fa-wifi"></i> High-Speed Fiber Internet & Power Sockets</li>
+                                <li><i class="fa-solid fa-book-open"></i> Curated Library with Urdu & English Classics</li>
+                                <li><i class="fa-solid fa-chair"></i> Ergonomic Seating & Natural Light</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Weekly Events & Workshops -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <span class="service-badge">Learning & Skill</span>
+                            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Women taking part in a creative workshop"
+                                 onerror="this.src='https://placehold.co/400x300/3E2C23/F7F0E3?text=Workshops'">
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">Events & Workshops</h3>
+                            <p style="font-size: 0.9rem;">Empowering interactive sessions designed to help you discover new talents or build your digital business.</p>
+                            <ul class="service-list">
+                                <li><i class="fa-solid fa-pen-nib"></i> Calligraphy, Mehndi & Craft Sessions</li>
+                                <li><i class="fa-solid fa-laptop"></i> Freelancing & Digital Marketing Bootcamps</li>
+                                <li><i class="fa-solid fa-comments"></i> Book Club & Financial Literacy Circles</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: Mothers' Meetups -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <span class="service-badge">Community</span>
+                            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Mothers having conversation while kids play safely"
+                                 onerror="this.src='https://placehold.co/400x300/9CAF88/FAF6EE?text=Mothers+Meetup'">
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">Mothers' Morning Nook</h3>
+                            <p style="font-size: 0.9rem;">Dedicated morning slots where mothers can relax, chat, and drink hot tea while children play safely.</p>
+                            <ul class="service-list">
+                                <li><i class="fa-solid fa-child"></i> Safe, padded toddler play corner</li>
+                                <li><i class="fa-solid fa-baby-carriage"></i> Stroller accessible with nursing comfort area</li>
+                                <li><i class="fa-solid fa-users-line"></i> Peer support groups and parenting talks</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 5: Private Bookings -->
+                    <div class="service-card">
+                        <div class="service-img-container">
+                            <span class="service-badge">Exclusive</span>
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Beautifully decorated table for private celebration"
+                                 onerror="this.src='https://placehold.co/400x300/C66B4E/FFFFFF?text=Private+Events'">
+                        </div>
+                        <div class="service-body">
+                            <h3 class="service-title">Private Gatherings</h3>
+                            <p style="font-size: 0.9rem;">Host your special milestones in complete privacy with custom catering and elegant decor setups.</p>
+                            <ul class="service-list">
+                                <li><i class="fa-solid fa-cake-candles"></i> Birthdays, Bridal Showers & Dholkis</li>
+                                <li><i class="fa-solid fa-briefcase"></i> Women-only Corporate Meetups & Product Launches</li>
+                                <li><i class="fa-solid fa-utensils"></i> Customized Menu & Floral Decor Packages</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             WHY CHOOSE MEHFIL
+        ========================================== -->
+        <section id="why-choose" class="section-padding why-section">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-subtitle">Why Mehfil-e-Zan?</span>
+                    <h2 class="section-title">Built Upon Core Values of Safety & Comfort</h2>
+                    <p style="max-width: 600px; margin: 0 auto;">We meticulously design every detail to give you an uncompromised feeling of peace, freedom, and belonging.</p>
+                </div>
+
+                <div class="why-grid">
+                    <!-- Point 1 -->
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fa-solid fa-person-dress"></i>
+                        </div>
+                        <h4>100% Women Space</h4>
+                        <p>Entirely managed and served by warm female staff. Guests are strictly women and young children.</p>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h4>Strict Privacy Protocol</h4>
+                        <p>No photography without explicit consent. Cameras are kept strictly away from private/prayer areas.</p>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
+                        <h4>Linger-Friendly Comfort</h4>
+                        <p>No rushing. Feel free to read, work, or chat for hours on our comfortable seating without pressure.</p>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h4>Learn, Earn & Connect</h4>
+                        <p>Access our community directory, skill workshops, and networking events tailored for female growth.</p>
+                    </div>
+
+                    <!-- Point 5 -->
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h4>Affordable Luxury</h4>
+                        <p>Premium ambiance, organic tea blends, and hygienic food priced thoughtfully for students and families.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             MEMBERSHIP SECTION
+        ========================================== -->
+        <section id="membership" class="section-padding" style="background-color: #FFFFFF;">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-subtitle">Join Our Sisterhood</span>
+                    <h2 class="section-title">Membership & Access Plans</h2>
+                    <p style="max-width: 600px; margin: 0 auto;">Choose how you want to experience Mehfil. Walk-ins are always welcome, or join as a member for exclusive perks!</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Plan 1: Walk-In Guest -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Day Pass / Guest</h3>
+                            <div class="pricing-price">Free Entry <span>/ just order tea</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Access to Cafe seating</li>
+                            <li><i class="fa-solid fa-check"></i> High-speed WiFi access</li>
+                            <li><i class="fa-solid fa-check"></i> Access to in-house library</li>
+                            <li><i class="fa-solid fa-check"></i> Pay per order from menu</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Visit Us Today</a>
+                    </div>
+
+                    <!-- Plan 2: Monthly Member (Featured) -->
+                    <div class="pricing-card featured">
+                        <span class="featured-badge">Most Popular</span>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Mehfil Saheli</h3>
+                            <div class="pricing-price">PKR 3,500 <span>/ month</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> 15% discount on all Cafe orders</li>
+                            <li><i class="fa-solid fa-check"></i> Priority seat reservation in Work Nook</li>
+                            <li><i class="fa-solid fa-check"></i> Free entry to 2 weekend workshops/month</li>
+                            <li><i class="fa-solid fa-check"></i> Member-only networking events access</li>
+                            <li><i class="fa-solid fa-check"></i> Free welcome pot of Karak Chai</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Become a Saheli Member</a>
+                    </div>
+
+                    <!-- Plan 3: Executive/Creator -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Mehfil Creator</h3>
+                            <div class="pricing-price">PKR 7,500 <span>/ month</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> Dedicated desk space reservation</li>
+                            <li><i class="fa-solid fa-check"></i> 20% discount on all Cafe orders</li>
+                            <li><i class="fa-solid fa-check"></i> Unlimited free access to all workshops</li>
+                            <li><i class="fa-solid fa-check"></i> 2 hours complimentary hall booking/mo</li>
+                            <li><i class="fa-solid fa-check"></i> Listing in Entrepreneur Directory</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Apply for Creator Pass</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             BOOK A VISIT / CONTACT SECTION
+        ========================================== -->
+        <section id="contact" class="section-padding contact-section">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 3rem;">
+                    <span class="section-subtitle">Plan Your Visit</span>
+                    <h2 class="section-title">Book a Visit or Reserve a Table</h2>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- Contact Details Info Panel -->
+                    <div class="contact-info">
+                        <div>
+                            <h3>We're Expecting You</h3>
+                            <p style="color: rgba(247, 240, 227, 0.8); margin-bottom: 2rem;">Drop by for a cup of chai, study in peace, or inquire about hosting your next intimate event with us.</p>
+
+                            <div class="info-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <h5>Location</h5>
+                                    <p>Block 4, Gulshan-e-Iqbal (Near Nipa Flyover), Karachi, Pakistan</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <div>
+                                    <h5>Operating Hours</h5>
+                                    <p>Monday – Sunday: 10:00 AM – 10:00 PM</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h5>Phone / WhatsApp</h5>
+                                    <p>+92 300 1234567</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h5>Email Inquiries</h5>
+                                    <p>salam@mehfilezan.pk</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p style="font-size: 0.85rem; color: rgba(247, 240, 227, 0.6); margin: 0;">* Safe, dedicated parking available in front of building.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact/Booking Form -->
+                    <div class="contact-form-container">
+                        <div id="form-alert" class="form-alert">
+                            <i class="fa-solid fa-circle-check" style="color: var(--sage-dark);"></i> 
+                            Shukriya! Your booking request has been received. Our team will contact you shortly on WhatsApp.
+                        </div>
+
+                        <form id="booking-form" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" id="name" class="form-control" placeholder="e.g. Fatima Ahmed" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">WhatsApp Phone *</label>
+                                    <input type="tel" id="phone" class="form-control" placeholder="03xx xxxxxxx" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="visit-type" class="form-label">Purpose of Visit</label>
+                                    <select id="visit-type" class="form-control">
+                                        <option value="cafe">Casual Cafe / Chai</option>
+                                        <option value="work">Work / Study Table</option>
+                                        <option value="membership">Membership Inquiry</option>
+                                        <option value="private-event">Private Event Booking</option>
+                                        <option value="workshop">Attending Workshop</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date" class="form-label">Preferred Date</label>
+                                    <input type="date" id="date" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="guests" class="form-label">Number of Guests</label>
+                                    <input type="number" id="guests" min="1" max="40" value="1" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="notes" class="form-label">Special Requests or Questions</label>
+                                <textarea id="notes" class="form-control" rows="3" placeholder="Let us know if you need high chairs, quiet desk, dietary preferences, etc."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fa-solid fa-paper-plane"></i> Submit Booking Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="brand-logo" style="margin-bottom: 1rem;">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 8h1a4 4 0 0 1 0 8h-1"></path>
+                                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path>
+                            </svg>
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-name">Mehfil-e-Zan</span>
+                            <span class="urdu-text" style="font-size: 1.1rem; color: var(--sage-green);">محفلِ زن</span>
+                        </div>
+                    </a>
+                    <p>Karachi’s warm, safe, and empowering women-only cafe and community space in Gulshan-e-Iqbal. Gather, grow, and glow with us.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Our Story</a></li>
+                        <li><a href="#services">Cafe & Workshops</a></li>
+                        <li><a href="#why-choose">Why Women-Only</a></li>
+                        <li><a href="#membership">Membership Plans</a></li>
+                        <li><a href="#contact">Book a Visit</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Book Club</a></li>
+                        <li><a href="#services">Skill Workshops</a></li>
+                        <li><a href="#services">Mothers' Meetup</a></li>
+                        <li><a href="#services">Private Showers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Visit Us</h4>
+                    <p style="font-size: 0.9rem; color: rgba(247, 240, 227, 0.7); margin-bottom: 0.5rem;">
+                        <i class="fa-solid fa-location-dot" style="color: var(--sage-green);"></i> Block 4, Gulshan-e-Iqbal, Karachi
+                    </p>
+                    <p style="font-size: 0.9rem; color: rgba(247, 240, 227, 0.7); margin-bottom: 0.5rem;">
+                        <i class="fa-solid fa-clock" style="color: var(--sage-green);"></i> Open 7 Days: 10am - 10pm
+                    </p>
+                    <p style="font-size: 0.9rem; color: rgba(247, 240, 227, 0.7);">
+                        <i class="fa-solid fa-phone" style="color: var(--sage-green);"></i> +92 300 1234567
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mehfil-e-Zan (محفلِ زن). All Rights Reserved.</p>
+                <p>Designed with warmth for the women of Karachi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT LOGIC
+    ========================================== -->
+    <script>
+        // 1. Mobile Hamburger Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = hamburgerBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu on link click
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = hamburgerBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+
+        // 2. Header shadow on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 30) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // 3. Form Submit Handler (No refresh)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            const form = document.getElementById('booking-form');
+            
+            // Show alert box
+            alertBox.style.display = 'block';
+            
+            // Reset form
+            form.reset();
+            
+            // Scroll to alert
+            alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Hide after 6 seconds
+            setTimeout(() => {
+                alertBox.style.display = 'none';
+            }, 6000);
+        }
+
+        // Set min date to today for date picker
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateInput = document.getElementById('date');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.min = today;
+                dateInput.value = today;
+            }
+        });
+    </script>
+</body>
+</html>
